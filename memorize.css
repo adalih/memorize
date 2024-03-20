@@ -1,0 +1,53 @@
+:root {
+    --teal-dark: #2F4F4F;
+    --aquamarine: #ACE6D7;
+  
+    --green-mid: #D8E6AC;
+    --green-light: #F4F8E7;
+}
+
+  
+#title {
+    background-color: var(--aquamarine);
+    border-radius: 15px;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    color: var(--teal-dark);
+}
+
+#credits {
+    background-color: var(--aquamarine);
+    border-radius: 15px;
+}
+  
+
+
+#practice-container {
+    background-color: var(--green-mid);
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 15px;
+}
+#practice-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#question-container {
+    background-color: var(--green-light);
+    border-radius: 15px;
+    padding: 8px;
+    margin-top: 15px;
+    width: 920px;
+    min-height: 150px;
+    font-size: 18px;
+    line-height: 1.4em;
+}
+#question-content {
+    text-align: left;
+    padding: 15px;
+}
+
+
