@@ -1,10 +1,16 @@
 class Memorize {
     constructor() {
         this.text = "";
+
+        this.selectedStrategy = -1;
     }
 
     setText(text) {
         this.text = text;
+    }
+
+    setSelectedStrategy(strategyIndex) {
+        this.selectedStrategy = strategyIndex;
     }
 }
 
@@ -12,11 +18,25 @@ class Memorize {
 //
 const memorize = new Memorize();
 
+// select strategy
+//
+function selectStrategy(strategyIndex) {
+    memorize.setSelectedStrategy(strategyIndex);
+    renderStrategy();
+}
+
+// render strategy based on selected strategy button
+//
+function renderStrategy() {
+    document.getElementById("strategy-text").innerHTML =
+        "<p>" + strategies[memorize.selectedStrategy] + "</p>";
+}
+
 const strategies = {
     0: "<b> BREAK IT DOWN </b><br> \
         <br> When we are approaching a large goal, tackling it all at once can seem insurmountable. \
         <br> Therefore, to make the process more manageable, we can break it down. \
-        <br> If it feels daunting to learn all the lines at once, how about just one line? \
+        <br> If it feels daunting to learn all the material at once, how about just one line? \
         <br> Start with just the first line.  Repeat until you know it. \
         <br> Then, work on just the second line.  Repeat until you know it. \
         <br> Add the second line on to the first, and repeat both lines until you are comfortable. \
@@ -24,23 +44,23 @@ const strategies = {
         <br> By doing a little at a time, we can slowly add on to what we know, \
         <br> and ensure that we know it well.",
     1: "<b> FREQUENCY OVER INTENSITY </b><br> \
-        <br> To learn the lines well, we must practice a lot. \
+        <br> To learn the material well, we must practice a lot. \
         <br> By maintaining a moderate intensity every session, we can increase the frequency of our sessions. \
         <br> In other words, doing a little bit regularly will add up to a lot in the end. \
         <br> There is value in building consistency through managing expectations: \
         <br> a little progress every time will add up over enough times.",
     2: "<b> WRITE IT DOWN </b><br> \
-        <br> When you are first learning the lines, try writing them down on paper, \
+        <br> When you are first learning the material, try writing it down on paper, \
         <br> each line, one line at a time, one line after the other. \
         <br> Writing the content down helps you process and absorb it in a cognitive manner. \
         <br> Writing the words down in your own handwriting also helps subconsciously signal to your brain \
         <br> that this information is something you believe in.",
     3: "<b> WRITE TO TEST </b><br> \
         <br> On a clean sheet of paper, \
-        <br> write down thelines from memory. \
+        <br> write down the material from memory. \
         <br> This will force you to be detail-oriented and to process the information in order, \
         <br> one line at a time, one word at a time. \
-        <br> When you are done, compare your regurgitation to the actual lines. \
+        <br> When you are done, compare your regurgitation to the actual content. \
         <br> If there are any words or lines you missed, add them in. \
         <br> If there are any words you got wrong, cross them out and correct them. \
         <br> By physically overwriting the words on the page, you are rewriting the correct information into your brain.",
