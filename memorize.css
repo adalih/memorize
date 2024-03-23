@@ -1,9 +1,16 @@
 :root {
     --teal-dark: #2F4F4F;
     --aquamarine: #ACE6D7;
+    --aquamarine-light: #DDF5EF;
+
+    --purple-dark: #909FFA;
+    --purple-mid: #C1C9FC;
   
     --green-mid: #D8E6AC;
     --green-light: #F4F8E7;
+
+    --orange-dark: #E76B00;
+    --orange-mid: #FF851B;
 }
 
   
@@ -51,3 +58,63 @@ body {
 }
 
 
+
+
+#strategy-text-container {
+    background-color: var(--aquamarine-light);
+    border-radius: 15px;
+    padding: 8px;
+    margin-top: 15px;
+    width: 880px;
+    min-height: 150px;
+    font-size: 18px;
+    line-height: 1.4em;
+}
+  
+#strategy-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#strategy-container {
+    background-color: var(--aquamarine);
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+  
+.strategy-options-container {
+    display: flex;
+    border-radius: 15px;
+    height: 42px;
+    width: 330px;
+    justify-content: space-between;
+    margin: 4px;
+}
+.strategy-option {
+    height: 10px;
+    border-radius: 9px;
+    padding: 2px 7px;
+    margin-top: 12px;
+    border: 2px solid;
+    white-space: nowrap;
+}
+.strategy-option:hover {
+    cursor: pointer;
+}
+.strategy-option p {
+    margin:0px;
+}
+.color-0 {
+    background-color: var(--orange-mid);
+}
+.color-0:hover{
+    background-color: var(--orange-dark);
+}
+.color-1 {
+    background-color: var(--purple-mid);
+}
+.color-1:hover{
+    background-color: var(--purple-dark);
+}
